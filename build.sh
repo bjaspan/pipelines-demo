@@ -1,3 +1,3 @@
 #!/bin/sh
 
-echo 'Hi, mom.' > himom.txt
+echo 'Hi, mom.' > ./docroot/himom.txt
