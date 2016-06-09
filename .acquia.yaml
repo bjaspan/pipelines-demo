@@ -2,6 +2,7 @@ build-steps:
   - ldf:
       type: script
       script:
+        - set -x
         - 'composer install'
         - 'find */. -type d -name .git -print0 | xargs -0 rm -rf'
         - 'mkdir docroot/sites/default/files'
