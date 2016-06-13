@@ -9,4 +9,4 @@ build-steps:
         - sleep 2
         - curl localhost:8081/.acquia.yaml
         - kill %1
-        - wait %1
+        - wait
