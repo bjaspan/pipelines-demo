@@ -4,4 +4,4 @@ build-steps:
       script:
         - set -x
         - sudo /etc/init.d/mysql start
-        - mysql -e "CREATE DATABASE drupal"
+        - mysql -u test -ptest -e "CREATE DATABASE drupal"
