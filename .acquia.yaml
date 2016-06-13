@@ -5,3 +5,5 @@ build-steps:
         - set -x
         - sudo /etc/init.d/mysql start
         - mysql -u root -proot -e "CREATE DATABASE drupal"
+        - php -S 127.0.0.1:8081 &
+        - curl localhost:8081/.acquia.yaml
