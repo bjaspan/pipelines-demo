@@ -3,8 +3,5 @@ build-steps:
       type: script
       script:
         - set -x
-        - composer install
-        - find */. -type d -name .git -print0 | xargs -0 rm -rf
-        - mkdir docroot/sites/default/files
-        - mv settings.php docroot/sites/default/settings.php
-        - mv services.yml docroot/sites/default/services.yml
+        - sudo /etc/init.d/mysql start
+        - mysql -e "CREATE DATABASE drupal"
