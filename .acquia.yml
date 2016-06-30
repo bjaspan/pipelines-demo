@@ -4,5 +4,5 @@ build-steps:
       script:
         - set -x
         - mount
-        - df
+        - df -h
         - du -sh
