@@ -4,9 +4,8 @@ build-steps:
       script:
         - set -x
         - mount
-        - df .
-        - df
+        - df /
         - du -sh
         - dd if=/dev/zero of=zero bs=1M count=100
-        - df
+        - df /
         - du -sh
