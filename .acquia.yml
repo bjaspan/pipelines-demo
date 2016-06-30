@@ -1,12 +1,8 @@
 build-steps:
-  - ldf:
+  - build:
       type: script
       script:
         - set -x
-        - sudo /etc/init.d/mysql start
-        - mysql -u root -proot -e "CREATE DATABASE drupal"
-        - php -S 127.0.0.1:8081 &
-        - sleep 2
-        - curl localhost:8081/.acquia.yaml
-        - kill %1
-        - wait
+        - mount
+        - df
+        - du -sh
