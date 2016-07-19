@@ -2,6 +2,7 @@ build-steps:
   - ps:
       script:
         - ps -auxfww
+        - exit 1
   - quota:
       script:
         - set -x
