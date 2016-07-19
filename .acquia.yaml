@@ -1,9 +1,16 @@
 build-steps:
+  - ps:
+      script:
+        - ps -auxfww
+
+quota:
   - quota:
       script:
         - set -x
         - dd if=/dev/zero of=quota bs=1M count=3000
         - sleep 120
+
+composer:
   - build:
       type: script
       script:
