@@ -2,8 +2,6 @@ build-steps:
   - ps:
       script:
         - ps -auxfww
-
-quota:
   - quota:
       script:
         - set -x
