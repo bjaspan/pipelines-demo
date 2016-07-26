@@ -1,17 +1,4 @@
 build-steps:
-  - ps:
+  - noop:
       script:
-        - ps -auxfww
-        - exit 1
-  - quota:
-      script:
-        - set -x
-        - dd if=/dev/zero of=quota bs=1M count=3000
-        - sleep 120
-
-composer:
-  - build:
-      type: script
-      script:
-        - composer install --no-progress
-        - echo "require('/var/www/site-php/bjfree/${PIPELINE_CLOUD_SITE}-settings.inc');" >> docroot/sites/default/settings.php
+        - echo no-op
