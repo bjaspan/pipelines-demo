@@ -1,4 +1,4 @@
 build-steps:
   - noop:
       script:
-        - echo no-op
+        - /bin/false
