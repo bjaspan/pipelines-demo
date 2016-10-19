@@ -1,4 +1,9 @@
-build-steps:
-  - noop:
-      script:
-        - ls
+version: 1.0.0
+
+events:
+  build:
+    steps:
+      - test:
+          type: script
+          script:
+            - composer install
