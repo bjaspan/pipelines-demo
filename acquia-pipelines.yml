@@ -3,7 +3,7 @@ version: 1.0.0
 events:
   build:
     steps:
-      - test:
+      - build:
           type: script
           script:
             - composer install
