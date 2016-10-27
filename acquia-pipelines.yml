@@ -21,9 +21,7 @@ events:
             - mysql -u root -proot -e "CREATE DATABASE drupal"
             - cd docroot
             - ../bin/drush site-install -y --db-url=$DB_URL
-            # - php -S 127.0.0.1:8080 &
-            - ../bin/drush runserver 8080 &
+            - php -S 127.0.0.1:8080 &
             - cd ..
             - sleep 2
             - ./bin/behat
-            - kill -INT %1
