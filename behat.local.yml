@@ -1,4 +1,8 @@
 default:
+  suites:
+    default:
+      filters:
+        tags: '~@preview&&~@javascript&&~@layout'
   extensions:
     Behat\MinkExtension:
       # If necessary, change this to the actual URL of your Lightning site.

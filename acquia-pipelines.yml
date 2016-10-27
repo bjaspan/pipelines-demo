@@ -24,4 +24,4 @@ events:
             - ../bin/drush runserver 8080 &
             - cd ..
             - sleep 2
-            - ./bin/behat --tags='~@preview&&~@javascript&&~@layout'
+            - ./bin/behat
