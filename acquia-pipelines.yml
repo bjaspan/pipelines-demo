@@ -14,7 +14,7 @@ events:
       - build:
           type: script
           script:
-            - composer install
+            - composer install --no-progress
       - test:
           type: script
           script:
