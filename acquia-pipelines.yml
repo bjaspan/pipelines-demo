@@ -6,6 +6,6 @@ events:
       - build:
           type: script
           script:
-            - mkdir ./docroot
+            - mkdir -p ./docroot
             - echo 'Hello, Pipelines.txt' > ./docroot/hello.txt
             
