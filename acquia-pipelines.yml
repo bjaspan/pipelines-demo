@@ -1,0 +1,11 @@
+version: 1.0.0
+events:
+  build:
+    steps:
+      - dependencies:
+          type: script
+          script:
+            - 'nvm install 5.12.0'
+            - 'npm install -g bower gulp-cli'
+            - 'npm install'
+            - 'bower install'
