@@ -1,0 +1,8 @@
+version: 1.0.0
+
+events:
+  build:
+    steps:
+      - main:
+          script:
+            - ps auxf
