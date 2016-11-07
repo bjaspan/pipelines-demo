@@ -5,4 +5,4 @@ events:
     steps:
       - main:
           script:
-            - ps auxf
+            - printenv
