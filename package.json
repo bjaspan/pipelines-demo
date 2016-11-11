@@ -1,0 +1,19 @@
+{
+  "name": "pipelines-ui",
+  "version": "0.0.1",
+  "description": "A user interface to manage and view Acquia Pipelines.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/acquia/pipelines-ui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acquia/pipelines-ui/issues"
+  },
+  "homepage": "https://github.com/acquia/pipelines-ui#readme"
+}
