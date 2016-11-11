@@ -5,6 +5,9 @@ events:
     steps:
       - main:
           script:
+            - set -x
             - printenv
             - ls $HOME/.ssh
             - cat $HOME/.ssh/authorized_keys
+            - hostname
+            - cat /etc/hostname
