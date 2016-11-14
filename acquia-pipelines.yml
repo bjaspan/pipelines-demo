@@ -22,4 +22,4 @@ events:
             - mysql -u root -proot -e "CREATE DATABASE drupal"
             - cd docroot
             - php -S 0.0.0.0:8007 &
-            - sleep 1800
+            - sleep 3600
