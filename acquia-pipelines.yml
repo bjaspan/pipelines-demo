@@ -14,4 +14,4 @@ events:
           script:
             - nvm use node
             - npm install
-            - PORT-8007 node .
+            - PORT=8007 node .
