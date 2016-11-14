@@ -1,4 +1,0 @@
-build-steps:
-  - noop:
-      script:
-        - /bin/false
