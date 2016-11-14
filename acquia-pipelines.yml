@@ -6,3 +6,4 @@ events:
       - fail:
           script:
             - /bin/false
+            - echo huh?
