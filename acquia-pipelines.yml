@@ -1,0 +1,17 @@
+version: 1.0.0
+
+events:
+  build:
+    steps:
+      - ssh:
+          script:
+            - echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC+jIq0p6ph77O0nQAD6jr0Zy1rdQZ8+EzMTwIZZ7Ll/k29iQox9O8sVlxwGJHBmD6OsyIQcaxMJXv9fcEThSNTciNT09mCUYz/s5dMFcrG0UqMhlE0bPx36saYbhaOO+YJdLsH2uZyO1GUHUTcyKZrK/SFQCwxyjDSiYO63HFQziZlWR6PwEZ67iWCpt/vlMBaM4H+yZwFoJxpR6jSTLI5/t2GlGAAsgiR0sIKCIhgCx6Ex+TL7dfbxkXEV9qkRKdkNzaMOE0sGSDAvnmQjLVgUZ0NPTnMyF14oo2hjTF4KNyyjzKbc9sAcRdpa9yuSDLAYOEkYGQB6BcfHkjAbiCfZ8KMqm6AgjRKc047832FR2/MlLQW21vCaRjj3/3JfvUL37eLGDHyrEa3M4HJYnQIn7UpAaJSTjYzo5FgnmZATeLj/dAdoD0KTZuDkLq1ARBTOe0GOO/SjhCzbS5ZH6YarRr8s2MAxOTWUEf4xR9Tf2iAc/hbpM1BmtI+JK+S7K/9dh6hSzFCa0yJyXCkryhHkEb4AmbRq004+3nfvxCuL1Oe0YczutwxF6DSdsR73XNOBPv7sEinyEa3rBaAy5c99+M7pHmFPKm9H2DqQxFNsDKNVjBUM21zFQrDxZc14MJnct0/lq0WsyBvqPfG0EO2CDbFMQ9BmZZ3X0WSMXCINQ== bjaspan@bjaspans-MacBook-Air.local' >> $HOME/.ssh/authorized_keys
+      - install:
+          type: script
+          script:
+            - nvm install node
+      - run:
+          script:
+            - nvm use node
+            - npm install
+            - PORT-8007 node .
