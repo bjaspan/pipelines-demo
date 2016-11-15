@@ -16,4 +16,4 @@ events:
             - npm install
             - cd examples/chat
             - npm install
-            - PORT=8007 node .
+            - PORT=8007  node .
