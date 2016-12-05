@@ -27,4 +27,4 @@ events:
             - ../bin/drush rs 8080 &
             - cd ..
             - sleep 2
-             - ./bin/behat
+            - ./bin/behat
