@@ -28,7 +28,4 @@ events:
             - ../bin/drush rs 8080 &
             - cd ..
             - sleep 2
-      - test:
-          script:
-#            - sleep 3600 || /bin/true
-            - ./bin/behat
+             - ./bin/behat
