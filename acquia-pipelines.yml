@@ -30,5 +30,5 @@ events:
             - sleep 2
       - test:
           script:
-            - sleep 3600 || /bin/true
+#            - sleep 3600 || /bin/true
             - ./bin/behat
