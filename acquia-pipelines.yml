@@ -24,6 +24,10 @@ events:
             - mysql -u root -proot -e "CREATE DATABASE drupal"
             - cd docroot
             - ../bin/drush site-install -y --db-url=$DB_URL
+      - test:
+          type: script
+          script:
+            - cd docroot
             - ../bin/drush rs 8080 &
             - cd ..
             - sleep 2
