@@ -32,4 +32,3 @@ events:
             - cd ..
             - sleep 2
             - ./bin/behat
-# blank
