@@ -1,0 +1,13 @@
+version: 1.0.0
+
+variables:
+  global:
+    KEVIN:
+      secure: 2acAn5EQJxJ79QowD7RrmcyT0LV8KYfn6Zyk70YX25vj9xzmNRrSJbcveTJD0ziDmFZ6MNX/nOKUUx6zaZIOsYQyiWp2dJvBQk0euDTP0EPz/xpUQkvEpIK84Jo7YbU5V6ZJBOxNqs08yDCiyJ/nL68ADAS8F+r/pEW+w7B+FgM73XXAOjkD5oLekKn7R5iKY6cW7Uru3h8PwZzgVOcSdrV36ysJ5pzBtawtRrMq18t5VDMgJg8x/ioxgqYQ7z28H1dq/PNXhp4eiKKbIunJY74DUyIxIBUTkw27XHmsTDZiu+G/eFUqugdkc9ZVFfXblezH6dIo5tbEkiY4OhbbR7JtbRNCkJG67LPLZWLbPP42fOfl9e4wvcQk+jCP6zfgSSI2YgaSQhYrEVGOcaY0XYCbn59kB2O1U5Cp99QQwLpHdfoY2MtwuNHehe49AsEiYVHi1IyPpME3Nt1dAVyE4YmJkbEcXnxsr+l0qDYDbuTdbQhM37Ubacz22Agt9vbw9T2ws7rSsn73kOts+yarG/HeFmatVhb4rqqQJ0QYCVidin7w/J4T+v36zO0zCn83GN72Tk7Cks6Q2L0dJRSU8WV0BVejer9EN7Wl8Bq46Px5lO8Yn5j55rm+R3eAqzqXA8jlyCC83OuGeybgvKlMETDAQqAcsuTLkc1AOtprCNTD3E=cIRppo7OwU4s077FaV1MIA==
+
+events:
+  build:
+    steps:
+      - ssh:
+          script:
+            - echo $KEVIN
