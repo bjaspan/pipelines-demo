@@ -8,6 +8,8 @@ variables:
 events:
   build:
     steps:
-      - ssh:
+      - test:
           script:
+            - set -x
             - echo $KEVIN
+            - printenv
