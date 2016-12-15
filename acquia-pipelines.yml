@@ -1,0 +1,9 @@
+version: 1.0.0
+
+events:
+  build:
+    steps:
+      - test:
+          script:
+            - set -x
+            - php -i
