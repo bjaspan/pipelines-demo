@@ -14,6 +14,7 @@ events:
             - set -o pipefail
             - 'mysql -u root -proot -e ''create database test_database'''
             - 'ssh bjfree.dev@free-3678.devcloud.hosting.acquia.com ''`drush @bjfree.dev ah-sql-connect | sed -e "s/mysql /mysqldump /"` | gzip'' | gunzip | mysql -u root -proot test_database'
+            - mysql -u root -proot -e 'show tables'
 
 ssh-keys:
   id_rsa:
