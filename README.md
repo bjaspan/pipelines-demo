@@ -38,3 +38,4 @@ If you peek at the ```.gitignore``` we provide, you'll see that certain director
 
 When you set up the project, Composer will create a file called ```composer.lock```, which is a list of which dependencies were installed, and in which versions. **Commit ```composer.lock``` to source control!** Then, when your colleagues want to spin up their own copies of the project, all they'll have to do is run ```composer install```, which will install the correct versions of everything in ```composer.lock```.
 
+# A meetingful documentation addition!
