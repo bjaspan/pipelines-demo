@@ -11,10 +11,9 @@ events:
       -
         test:
           script:
-            - 'echo fo'
-#            - set -o pipefail
-#            - 'mysql -u root -proot -e ''create database test_database'''
-#            - 'ssh bjfree.dev@free-3678.devcloud.hosting.acquia.com ''`drush @bjfree.dev ah-sql-connect | sed -e "s/mysql /mysqldump /"` | gzip'' | gunzip | mysql -u root -proot test_database'
+            - set -o pipefail
+            - 'mysql -u root -proot -e ''create database test_database'''
+            - 'ssh bjfree.dev@free-3678.devcloud.hosting.acquia.com ''`drush @bjfree.dev ah-sql-connect | sed -e "s/mysql /mysqldump /"` | gzip'' | gunzip | mysql -u root -proot test_database'
 
 ssh-keys:
   id_rsa:
