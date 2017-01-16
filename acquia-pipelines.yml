@@ -12,3 +12,4 @@ events:
       - test:
           script:
             - mysql -u root -proot -e 'create database test_database'
+            - mysql -u root -proot -e 'show tables' test_database
