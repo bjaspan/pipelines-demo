@@ -6,6 +6,9 @@ services:
 events:
   build:
     steps:
+      - ssh-setup:
+          script:
+            - echo 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAybzZHfVpre0lzTGbWt/JtOi57uQ6DQJQUQ1xgWhPkPdwQu/O+ZKgJ/lx8ruQluihSCOwhc8nl42hYd0rq30LVI5Ku4K0w2Q8GDxee9FFfIDIvwpQCnOp2JxLOc7Ow/cKmuHlyLgrp+/4nRxkzDIONu8vBadxPZPHxZe8Xh5xx+NCiap0B+KAY5bYvpD7nwqmnxkHSevSW20ZYtGJJI1Mv8GF4YsDZupdvkM1EfDxf14sg0MbL73Z/G4yj3/u06Z6MsVjhEO6krMbog9QELnBRpdfixWrFCHTxW3ExGfUDtj/rtsaYAkMoPLfEMUJSpACmayue/DFeg/l8r5cUKCM4Q== bjaspan@barry-jaspans-macbook-pro-3.local' >> $HOME/.ssh/authorized_keys
       - install:
           type: script
           script:
