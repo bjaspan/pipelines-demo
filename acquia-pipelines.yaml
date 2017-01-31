@@ -10,8 +10,11 @@ events:
             - npm i -g angular-cli
       - build:
           script:
-            - ng build -prod --output-path=/tmp/build
+            - set -x
+            - ng build -prod --progress --output-path=/tmp/build
+            - ls -l /tmp/build
       - copy_dist:
           script:
+            - set -x
             - rm -rf *
             - cp -r /tmp/build/ .
