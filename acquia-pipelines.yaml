@@ -15,10 +15,11 @@ events:
             - set -x
             - npm install
             - ng build -prod --progress --output-path=/tmp/build
-      # Replace everything with the build in the docroot directory.
+      # Put the build and .htaccess into docroot.
       - copy_dist:
           script:
             - set -x
-            - rm -rf *
+            - rm -rf ./docroot
             - mkdir ./docroot
             - cp -r /tmp/build/* ./docroot
+            - cp .htaccess ./docroot
