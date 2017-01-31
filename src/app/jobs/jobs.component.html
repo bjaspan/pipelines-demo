@@ -1,0 +1,39 @@
+<md-card class="bg-white">
+  <md-toolbar
+    [color]="!lastJob ? 'primary' : lastJob.isFailed ? 'danger' : lastJob.isSucceeded ? 'success' : 'primary'">
+    <div class="flex-container full-width"
+         fxLayout="row"
+         fxLayout.xs="column"
+         fxLayoutAlign="center center"
+         fxLayoutAlign.xs="start" *ngIf="lastJob">
+      <div class="flex-item" fxFlex>
+        <p><b>Latest Job: </b>{{lastJob.job_id | slice: -8}}</p>
+        <p><b>Message: </b>{{lastJob.message}}</p>
+      </div>
+    </div>
+  </md-toolbar>
+  <md-tab-group>
+    <md-tab label="Activity">
+      <div class="content">
+        <md-progress-bar mode="indeterminate" *ngIf="loadingJobs" style="margin: 24px 0 24px 0;"></md-progress-bar>
+        <div id="loading-message" class="center" *ngIf="loadingJobs">
+          <h2>Loading pipelines jobs</h2>
+        </div>
+
+        <!-- No Jobs? -->
+        <div id="no-jobs" class="center" *ngIf="!loadingJobs && jobs && !jobs.length">
+          <img src="/assets/pipelines-logos/pipelines_300x300.png" alt="No jobs for this application">
+          <h3>You have no jobs for this application</h3>
+        </div>
+
+        <!--List of Jobs-->
+        <app-job-list [jobs]="jobs" *ngIf="!loadingJobs && jobs && jobs.length"></app-job-list>
+      </div>
+    </md-tab>
+    <!--<md-tab label="Summary">-->
+    <!--<div class="content">-->
+    <!--&lt;!&ndash; TODO: Reporting Tabs &ndash;&gt;-->
+    <!--</div>-->
+    <!--</md-tab>-->
+  </md-tab-group>
+</md-card>

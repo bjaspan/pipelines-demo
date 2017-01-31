@@ -1,0 +1,38 @@
+<table class="full-width">
+  <thead>
+  <tr>
+    <th>Status</th>
+    <th>Build</th>
+    <th>Branch</th>
+    <th class="hidden-sm-down">Message</th>
+    <th class="hidden-md-down">Creator</th>
+    <th class="hidden-sm-down">Duration</th>
+    <th class="hidden-sm-down">Completed</th>
+    <th class="">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let job of jobs">
+    <td class="center">
+      <app-job-status [status]="job.status"></app-job-status>
+    </td>
+    <td class="center"><a routerLink="/jobs/{{job.sitename}}/{{job.job_id}}">{{job.job_id | slice:-8}}</a>
+    </td>
+    <td class="center">{{job.branch}}</td>
+    <td class="hidden-sm-down">{{job.message}}</td>
+    <td class="center hidden-md-down">{{job.requested_by}}</td>
+    <td class="center hidden-sm-down" *ngIf="job.duration">{{job.duration | amDuration:'seconds'}}</td>
+    <td class="center hidden-sm-down" *ngIf="!job.duration">-</td>
+    <td class="center hidden-sm-down" *ngIf="job.finished_at">{{job.finishedAt | amTimeAgo}}</td>
+    <td class="center hidden-sm-down" *ngIf="!job.finished_at">-</td>
+    <td class="center">
+      <button md-button *ngIf="job.isFailed">
+        <md-icon color="primary">refresh</md-icon>
+      </button>
+      <button md-button *ngIf="job.isUnfinished">
+        <md-icon color="primary">stop</md-icon>
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</table>

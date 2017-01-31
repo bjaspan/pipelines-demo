@@ -1,0 +1,40 @@
+<md-card>
+  <h1><a routerLink="/jobs/app-id">
+    <md-icon>chevron_left</md-icon>
+  </a>&nbsp;Job 1
+  </h1>
+  <h2><em>In Progress</em></h2>
+  <md-progress-bar mode="indeterminate"></md-progress-bar>
+  <div id="logs">
+    <div class="item" *ngFor="let log of logs">
+      <table class="full-width">
+        <tr>
+          <td>
+            <div class="chevron">
+              <button class="drop" md-button (click)="selectedLog = selectedLog == log ? null : log">
+                <md-icon>expand_more</md-icon>
+              </button>
+            </div>
+          </td>
+          <td>
+            <div class="log">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="log-detail" *ngIf="selectedLog == log">
+        <pre>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+Amet aperiam aspernatur consectetur consequatur, cumque delectus enim,
+eum fugiat laborum libero modi molestias nemo quidem quod rerum veritatis
+vitae! Beatae doloremque eos esse eveniet excepturi in itaque nihil numquam
+provident quos ratione recusandae, repellendus rerum sequi voluptatem?
+Debitis dolor esse ipsa nostrum similique temporibus voluptatum?
+Aperiam asperiores commodi deleniti, dolorem doloribus, fugit illum,
+laborum necessitatibus non obcaecati quidem recusandae rem ullam voluptas voluptates.
+Accusantium alias culpa cum debitis delectus dolorem esse exercitationem
+facilis harum id illum incidunt ipsam magnam, minus mollitia nesciunt,
+nostrum numquam obcaecati recusandae repellendus repudiandae veniam voluptas. Veritatis?</pre>
+      </div>
+    </div>
+  </div>
+</md-card>

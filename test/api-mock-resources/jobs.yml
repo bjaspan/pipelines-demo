@@ -1,0 +1,228 @@
+---
+routes:
+  /ci/jobs:
+    GET:
+      response:
+        jobs:
+          -
+            branch: master
+            commit: ~
+            duration: 1462297582
+            exit_message: "Failed to complete the build because there is no .acquia.yml build file."
+            finished_at: 1462297582
+            job_id: 2cb7d930-7da3-480c-82de-db719d50f0d9
+            output: {}
+            pipeline_id: a40ab6a5-6b30-40e7-abc7-5a7695499f44
+            requested_at: 1462297477
+            requested_by: admin@example.com
+            sitename: "enterprise-g1:sfwiptravis"
+            started_at: 0
+            status: failed_by_system
+          -
+            branch: master
+            commit: hashhash
+            duration: ~
+            exit_message: ~
+            finished_at: 0
+            job_id: ad9aacb4-11de-44da-b2ac-a478a59f55ca
+            output: {}
+            pipeline_id: 466b4c99-c0cb-4e3a-ad18-b8dad85e6ea5
+            requested_at: 1460745743
+            requested_by: admin@example.com
+            sitename: "enterprise-g1:sfwiptravis"
+            started_at: 0
+            status: running
+          -
+            branch: MS-1170
+            commit: ~
+            duration: ~
+            exit_message: ~
+            finished_at: 0
+            job_id: 8f0c38d5-68b5-4192-8439-35eb27577ddc
+            output: {}
+            pipeline_id: 466b4c99-c0cb-4e3a-ad18-b8dad85e6ea5
+            requested_at: 1460745734
+            requested_by: admin@example.com
+            sitename: "enterprise-g1:sfwiptravis"
+            started_at: 0
+            status: queued
+          -
+            branch: basic
+            commit: ~
+            duration: ~
+            exit_message: ~
+            finished_at: 0
+            job_id: 34b06147-1344-414c-bc0e-1b9b4cf5297c
+            output: {}
+            pipeline_id: 466b4c99-c0cb-4e3a-ad18-b8dad85e6ea5
+            requested_at: 1460745718
+            requested_by: admin@example.com
+            sitename: "enterprise-g1:sfwiptravis"
+            started_at: 0
+            status: terminating
+          -
+            branch: basic
+            commit: ~
+            duration: ~
+            exit_message: ~
+            finished_at: 0
+            job_id: 34b06147-1344-414c-bc0e-1b9b4cf5297c
+            output: {}
+            pipeline_id: 466b4c99-c0cb-4e3a-ad18-b8dad85e6ea5
+            requested_at: 1460745718
+            requested_by: admin@example.com
+            sitename: "enterprise-g1:sfwiptravis"
+            started_at: 0
+            status: succeeded
+          -
+            branch: basic
+            commit: ~
+            duration: ~
+            exit_message: ~
+            finished_at: 0
+            job_id: 34b06147-1344-414c-bc0e-1b9b4cf5297c
+            output: {}
+            pipeline_id: 466b4c99-c0cb-4e3a-ad18-b8dad85e6ea5
+            requested_at: 1460745718
+            requested_by: admin@example.com
+            sitename: "enterprise-g1:sfwiptravis"
+            started_at: 0
+            status: succeeded
+          -
+            branch: basic
+            commit: ~
+            duration: ~
+            exit_message: Your job was terminated
+            finished_at: 0
+            job_id: 34b06147-1344-414c-bc0e-1b9b4cf5297c
+            output: {}
+            pipeline_id: 466b4c99-c0cb-4e3a-ad18-b8dad85e6ea5
+            requested_at: 1460745718
+            requested_by: admin@example.com
+            sitename: "enterprise-g1:sfwiptravis"
+            started_at: 0
+            status: terminated
+          -
+            branch: basic
+            commit: ~
+            duration: ~
+            exit_message: You have failed your job
+            finished_at: 0
+            job_id: 34b06147-1344-414c-bc0e-1b9b4cf5297c
+            output: {}
+            pipeline_id: 466b4c99-c0cb-4e3a-ad18-b8dad85e6ea5
+            requested_at: 1460745718
+            requested_by: admin@example.com
+            sitename: "enterprise-g1:sfwiptravis"
+            started_at: 0
+            status: failed_by_user
+          -
+            branch: basic
+            commit: ~
+            duration: ~
+            exit_message: ~
+            finished_at: 0
+            job_id: 34b06147-1344-414c-bc0e-1b9b4cf5297c
+            output: {}
+            pipeline_id: 466b4c99-c0cb-4e3a-ad18-b8dad85e6ea5
+            requested_at: 1460745718
+            requested_by: admin@example.com
+            sitename: "enterprise-g1:sfwiptravis"
+            started_at: 0
+            status: started
+          -
+            branch: basic
+            commit: ~
+            duration: ~
+            exit_message: There is a warning in your job
+            finished_at: 0
+            job_id: 34b06147-1344-414c-bc0e-1b9b4cf5297c
+            output: {}
+            pipeline_id: 466b4c99-c0cb-4e3a-ad18-b8dad85e6ea5
+            requested_at: 1460745718
+            requested_by: admin@example.com
+            sitename: "enterprise-g1:sfwiptravis"
+            started_at: 0
+            status: warning
+          -
+            branch: basic
+            commit: ~
+            duration: ~
+            exit_message: ~
+            finished_at: 0
+            job_id: 34b06147-1344-414c-bc0e-1b9b4cf5297c
+            output: {}
+            pipeline_id: 466b4c99-c0cb-4e3a-ad18-b8dad85e6ea5
+            requested_at: 1460745718
+            requested_by: admin@example.com
+            sitename: "enterprise-g1:sfwiptravis"
+            started_at: 0
+            status: paused
+  /ci/jobs/2cb7d930-7da3-480c-82de-db719d50f0d9:
+    GET:
+      response:
+        job:
+          branch: master
+          commit: ~
+          duration: 1462297582
+          exit_message: "Failed to complete the build because there is no .acquia.yml build file."
+          finished_at: 1462297582
+          job_id: 2cb7d930-7da3-480c-82de-db719d50f0d9
+          output: {}
+          pipeline_id: a40ab6a5-6b30-40e7-abc7-5a7695499f44
+          requested_at: 1462297477
+          requested_by: admin@example.com
+          sitename: "enterprise-g1:sfwiptravis"
+          started_at: 0
+          status: failed_by_system
+  /ci/jobs/34b06147-1344-414c-bc0e-1b9b4cf5297c:
+    GET:
+      response:
+        job:
+          branch: basic
+          commit: ~
+          duration: ~
+          exit_message: ~
+          finished_at: 0
+          job_id: 34b06147-1344-414c-bc0e-1b9b4cf5297c
+          output: {}
+          pipeline_id: 466b4c99-c0cb-4e3a-ad18-b8dad85e6ea5
+          requested_at: 1460745718
+          requested_by: admin@example.com
+          sitename: "enterprise-g1:sfwiptravis"
+          started_at: 0
+          status: queued
+  /ci/jobs/8f0c38d5-68b5-4192-8439-35eb27577ddc:
+    GET:
+      response:
+        job:
+          branch: MS-1170
+          commit: ~
+          duration: ~
+          exit_message: ~
+          finished_at: 0
+          job_id: 8f0c38d5-68b5-4192-8439-35eb27577ddc
+          output: {}
+          pipeline_id: 466b4c99-c0cb-4e3a-ad18-b8dad85e6ea5
+          requested_at: 1460745734
+          requested_by: admin@example.com
+          sitename: "enterprise-g1:sfwiptravis"
+          started_at: 0
+          status: succeeded
+  /ci/jobs/ad9aacb4-11de-44da-b2ac-a478a59f55ca:
+    GET:
+      response:
+        job:
+          branch: master
+          commit: ~
+          duration: ~
+          exit_message: ~
+          finished_at: 0
+          job_id: ad9aacb4-11de-44da-b2ac-a478a59f55ca
+          output: {}
+          pipeline_id: 466b4c99-c0cb-4e3a-ad18-b8dad85e6ea5
+          requested_at: 1460745743
+          requested_by: admin@example.com
+          sitename: "enterprise-g1:sfwiptravis"
+          started_at: 0
+          status: queued

@@ -1,0 +1,10 @@
+<div class="job-status" [ngSwitch]="status">
+  <md-icon *ngSwitchCase="'succeeded'" class="success">check_circle</md-icon>
+  <md-icon *ngSwitchCase="'warning'" class="warning">warning</md-icon>
+  <md-icon *ngSwitchCase="'queued'" class="primary">timer</md-icon>
+  <md-spinner class="status-spinner" *ngSwitchCase="'starting'" color="primary"></md-spinner>
+  <md-spinner class="status-spinner" *ngSwitchCase="'started'" color="primary"></md-spinner>
+  <md-spinner class="status-spinner" *ngSwitchCase="'running'" color="primary"></md-spinner>
+  <md-spinner class="status-spinner" *ngSwitchCase="'terminating'" color="danger"></md-spinner>
+  <md-icon *ngSwitchDefault class="danger">remove_circle</md-icon>
+</div>

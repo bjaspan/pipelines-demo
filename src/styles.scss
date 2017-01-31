@@ -1,0 +1,192 @@
+@import '~@angular/material/core/theming/all-theme';
+// Plus imports for other components in your app.
+
+// Include the base styles for Angular Material core. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+@include md-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$elemental-primary: md-palette($md-light-blue);
+$elemental-accent: md-palette($md-purple, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$elemental-warn: md-palette($md-yellow);
+
+// Customer danger palette
+$elemental-danger: #d54e56;
+$elemental-success: #8cc259;
+$elemental-warning: #f6b654;
+
+// Create the theme object (a Sass map containing all of the palettes).
+$elemental-theme: md-light-theme($elemental-primary, $elemental-accent, $elemental-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($elemental-theme);
+
+// base responsive host styling
+html, body {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #eeeeee;
+}
+
+// Material Overrides For Custom Colors
+md-toolbar.md-danger {
+  background-color: $elemental-danger;
+}
+
+md-toolbar.md-success {
+  background-color: $elemental-success;
+}
+
+md-spinner[color="warn"] {
+  path {
+    stroke: $elemental-warning;
+  }
+}
+
+md-spinner[color="danger"] {
+  path {
+    stroke: $elemental-danger;
+  }
+}
+
+// Theme Helper styles
+
+.bg-danger {
+  background-color: $elemental-danger;
+}
+
+.danger {
+  color: $elemental-danger;
+}
+
+.error {
+  color: $elemental-danger;
+}
+
+.success {
+  color: $elemental-success;
+}
+
+.warning {
+  color: $elemental-warning;
+}
+
+.primary {
+  color: md-color($elemental-primary, A400);
+}
+
+// Basic helper styles
+.bg-white {
+  background-color: #fff;
+}
+
+.flex-fill {
+  // This fills the remaining space, by using flexbox.
+  flex: 1 1 auto;
+}
+
+.over-960 {
+  min-width: 960px;
+  overflow: auto;
+}
+
+.over-640 {
+  min-width: 640px;
+  overflow: auto;
+}
+
+.white {
+  color: #fff;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.black {
+  color: #000;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+.hidden-xs-up {
+  display: none !important;
+}
+
+@media (max-width: 575px) {
+  .hidden-xs-down {
+    display: none !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .hidden-sm-up {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hidden-sm-down {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .hidden-md-up {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .hidden-md-down {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .hidden-lg-up {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .hidden-lg-down {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hidden-xl-up {
+    display: none !important;
+  }
+}
+
+.hidden-xl-down {
+  display: none !important;
+}
+
+

@@ -1,0 +1,39 @@
+:host {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 24px;
+  background-color: #eee;
+}
+
+h2 {
+  font-weight: lighter;
+  font-size: 14px;
+  color: #636363;
+}
+
+.chevron {
+  display: inline-block;
+}
+
+.drop {
+  width: 25px;
+  padding: 2px;
+}
+
+.log {
+  text-overflow: ellipsis;
+}
+
+.log-detail {
+  background-color: #111111;
+  color: #e0e0e0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 8px;
+  overflow: auto;
+}
