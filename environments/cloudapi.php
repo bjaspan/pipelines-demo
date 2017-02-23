@@ -48,6 +48,7 @@ class QuickCloudAPI {
 
     function post($path, $body_params = []) {
         $this->debug("POST $path");
+        $this->debug('  ' . json_encode($body_params));
         $response = $this->client->request('POST', "{$this->opts['endpoint']}/$path", [
             'json' => $body_params
         ]);
@@ -88,14 +89,49 @@ class QuickCloudAPI {
         case 202:
             $parsed = json_decode($response->getBody());
             if ($parsed === NULL) {
-                throw new Exception("Unexpected reply: " . $response->getBody());
+                throw new UnparseableResponseBodyException($response);
             }
             return $parsed;
         default:
-            throw new Exception("HTTP " . $response->getStatusCode() . ": " . $response->getBody());
+            throw new UnexpectedResponseStatusException($response);
         }
     }
 }
 
 class Exception extends \Exception {
+    function __construct($response, $message) {
+        $this->response = $response;
+        parent::__construct($message);
+    }
+
+    function getStatus() {
+        return $this->response->getStatusCode();
+    }
+
+    function getBody() {
+        return $this->response->getBody();
+    }
+
+    function getResponse() {
+        return $this->response;
+    }
+}
+
+class UnparseableResponseBodyException extends Exception {
+    function __construct($response) {
+        parent::__construct($response, 'Unexpected response');
+        $this->message .= ": HTTP status ".$this->getStatus().": ".$this->getBody();
+    }
+}
+
+class UnexpectedResponseStatusException extends Exception {
+    function __construct($response) {
+        parent::__construct($response, 'Unexpected HTTP status');
+        $this->message .= ' '.$this->getStatus().': '.$this->getBody();
+        $this->result = @json_decode($this->getBody(), TRUE);
+    }
+
+    function getResult() {
+        return $this->result;
+    }
 }

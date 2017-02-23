@@ -72,10 +72,20 @@ class CloudODE {
                 // Create the environment. We cannot select a branch that does
                 // not exist yet.
                 print "Environments: Creating Cloud environment...\n";
-                $this->api->post("applications/{$this->app}/environments", [
-                    'label' => $label,
-                    'branch' => 'master',
-                ]);
+                try {
+                    $this->api->post("applications/{$this->app}/environments", [
+                        'label' => $label,
+                        'branch' => 'master',
+                    ]);
+                }
+                catch (CloudAPI\UnexpectedResponseStatusException $e) {
+                    $result = $e->getResult();
+                    if (strpos($result['message'], 'On-demand environments are not available') !== FALSE) {
+                        print "Environments: {$result['message']}\n";
+                        exit(1);
+                    }
+                    throw $e;
+                }
 
                 // Find the environment we just created. The label is the only
                 // we have to identify it.
