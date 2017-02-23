@@ -2,11 +2,9 @@ version: 1.0.0
 
 variables:
   global:
-    N3_KEY: 'your key'
-    # For the POC to work, you must add the N3_SECRET environment variable
-    # containing your Cloud API secret key:
-    #
-    # echo -n 'your secret' | pipelines encrypt - --add variables.global.N3_SECRET
+    N3_KEY: 1dc88f01-117f-4c6b-bab3-28629e42f8f7
+    N3_SECRET:
+      secure: 2aco7eWGK5lrmL2wnDL1fu5rUx8t58cstS4oc6AAYvzGRtYQHYwgEBbJU7xfuRYZwldEmEh0jCxne1G8yxMjv7xk1ikb7bhUWJ6Csc++G81rffJKB/1tFk6+Ys9HR4sjIo4JutcCYZuzPwEs4Sz4a1TennDhsk7t8bsXiH4STRPIAWW5/WPLE2K5ofL3PoG6byP1qeNTmgLPVhl+tmo7nZs4b0sfLHs8A8cqg9GAeyyAL+p5N2mDF0mk3qWuYm+HUmKkI91DAE7EuLWUMRLLQjCLLXm0vC5Uq067mKddntNlkg3cY4jw0Xb3uMC2xnvRiNDibPCrNLME0Wp1DF222J9wkd86C3Hx9Bvh2Cc7FWDQi14JMH6ekJxUr7Jv403+m2tNEwarJvbTQAm0ISH2rOKj2U8vzlxlR59B1vpsCw8O/lwzz9imdWqfmJZGeXTI95jja9RVaKzeTs/WKEVtXPAkVRMbGHYwzkzFfmeVx22IMB0Cfdz1n0d9EGdvw9y/Bl1J6zLjCUokyz0Q6SfXtrT2QR0N1KkFYI8bzMQAXEk85n5ODlaZkeMHds520oMd8pYw5LgsUOVJCECYgpiZiVBitTS4kLtXeUKHwt9LKU2T2dzUzX1rs3JZ/PIkZbfsRzPlxVNZtjc4LA+ubp5PppDjn2FGEYLuE4CXtz4H+8qGWo=VtenI0TiO9qGebwL8v4n3GYHyMmi+WD06eU3ohb9vw3KQ1KvV7PyN1yGlhea/gsCoYOyVT9u0Lrl3h+iOi8Dm40eGC1YZ2VHY0JTzk3hldoJbGXv75YRpklzvDAeGp9kP9zovRuJMu9KPcVToxym6igGIz/EWurTSAlMDYITfWI=
 
 events:
   build:
