@@ -29,7 +29,7 @@ class CloudODE {
         $envs = $this->api->get("applications/{$this->app}/environments");
         foreach ($envs->_embedded->items as $env) {
             if ($env->flags->ode == 1 && $env->vcs->path == $this->deploy_path) {
-                print "Deleting environment {$env->label} ({$env->name}).\n";
+                print "Environments: Deleting {$env->label} ({$env->name}).\n";
                 $this->api->delete("environments/{$env->id}");
             }
         }
@@ -66,12 +66,12 @@ class CloudODE {
             if ($env) {
                 // Deploy the new build.
                 // @todo: No way to know when it is done.
-                print "Updating Cloud environment {$env->label} ({$env->name}).\n";
+                print "Environments: Updating Cloud environment {$env->label} ({$env->name}).\n";
             }
             else {
                 // Create the environment. We cannot select a branch that does
                 // not exist yet.
-                print "Creating Cloud environment...\n";
+                print "Environments: Creating Cloud environment...\n";
                 $this->api->post("applications/{$this->app}/environments", [
                     'label' => $label,
                     'branch' => 'master',
@@ -86,9 +86,8 @@ class CloudODE {
                 });
 
                 // Wait for environment to be ready.
-                print "Waiting for environment {$env->label} ({$env->name}) to be ready...\n";
+                print "Environments: Waiting for {$env->name} to be ready...\n";
                 $this->api->poll("environments/{$env->id}", function ($env, $count) {
-                    print "tick $count: {$env->status}\n";
                     return $env->status == 'normal';
                 });
 
@@ -102,7 +101,7 @@ class CloudODE {
             }
         }
         catch (CloudAPI\Exception $e) {
-            print "Cloud API error: " . $e->getMessage();
+            print "Environments: Cloud API error: " . $e->getMessage();
             exit(1);
         }
     }
@@ -113,6 +112,7 @@ class CloudODE {
     }
 
     function execute() {
+        print "Environments: Event {$this->event}.\n";
         switch ($this->event) {
         case 'build':
             $this->deploy();
