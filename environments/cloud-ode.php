@@ -19,7 +19,7 @@ class CloudODE {
         $this->app = getenv('PIPELINE_APPLICATION_ID');
         $this->deploy_path = getenv('PIPELINE_DEPLOY_VCS_PATH');
         $this->event = getenv('PIPELINES_EVENT');
-        if (!isset($this->event)) {
+        if (empty($this->event)) {
             $this->event = 'build';
         }
     }
