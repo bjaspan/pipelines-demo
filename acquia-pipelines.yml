@@ -1,0 +1,36 @@
+version: 1.0.0
+
+variables:
+  global:
+    N3_KEY: 'your key'
+    # For the POC to work, you must add the N3_SECRET environment variable
+    # containing your Cloud API secret key:
+    #
+    # echo -n 'your secret' | pipelines encrypt - --add variables.global.N3_SECRET
+
+events:
+  build:
+    steps:
+      # Put your build instructions here.  This POC has no site, so no build.
+      - build_site:
+          script:
+            - echo "Put your build instructions here."
+      # The "deploy" step runs the proof-of-concept code. Later, this
+      # functionality will be built into Pipelines directly and controlled via
+      # YAML.
+      - deploy:
+          script:
+            - cd environments
+            - composer install
+            - php cloud-ode.php
+
+  merge:
+    steps:
+      # The "deploy" step runs the proof-of-concept code. Later, this
+      # functionality will be built into Pipelines directly and controlled via
+      # YAML.
+      - deploy:
+          script:
+            - cd environments
+            - composer install
+            - php cloud-ode.php
