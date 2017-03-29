@@ -1,0 +1,10 @@
+version: 1.0.0
+
+events:
+  build:
+    steps:
+      - run:
+          script:
+            - set -x
+            - cat /mnt/tmp/local.prod/.variables.script
+            - cat /mnt/tmp/local.prod/.decoded.yml
